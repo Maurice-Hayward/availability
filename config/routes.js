@@ -21,6 +21,8 @@ module.exports = [
     path: '/',
     handler: 'ViewController.helloWorld'
   },
+
+  //Serving Static Files css, img, html
   {
     method: 'GET',
     path: '/public/',
@@ -36,6 +38,25 @@ module.exports = [
 
     }
   },
+
+  //Serving static files js file (controller)
+  {
+    method: 'GET',
+    path: '/api/controllers/',
+
+    handler: {
+      directory: {
+      path: path.resolve(__dirname, '..', 'api/controllers/'),
+      index:true,
+      listing: true,
+      redirectToSlash:true
+      }
+     
+
+    }
+  },
+
+
 
   /**
    * Constrain the DefaultController.info handler to accept only GET requests.

@@ -9,6 +9,8 @@
 
 'use strict'
 
+const path = require('path')
+
 module.exports = [
 
   /**
@@ -18,6 +20,21 @@ module.exports = [
     method: 'GET',
     path: '/',
     handler: 'ViewController.helloWorld'
+  },
+  {
+    method: 'GET',
+    path: '/public/',
+
+    handler: {
+      directory: {
+      path: path.resolve(__dirname, '..', 'public'),
+      index:true,
+      listing: true,
+      redirectToSlash:true
+      }
+     
+
+    }
   },
 
   /**

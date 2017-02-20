@@ -1,0 +1,44 @@
+{
+  "name": "availability",
+  "version": "0.0.0",
+  "description": "A new Trails.js Application",
+  "homepage": "http://trailsjs.io",
+  "author": {
+    "name": "maurice_hayward",
+    "email": "mauricehayward1@gmail.com",
+    "url": "https://github.com/trailsjs"
+  },
+  "main": "index.js",
+  "keywords": [
+    "",
+    "trails",
+    "trailsjs"
+  ],
+  "dependencies": {
+    "express": "^4.14.1",
+    "trailpack-express": "^2.0.3",
+    "trailpack-footprints": "^2.0.0",
+    "trailpack-repl": "v2-latest",
+    "trailpack-router": "v2-latest",
+    "trailpack-waterline": "^2.0.0-rc2",
+    "trails": "v2-latest",
+    "winston": "^2.3"
+  },
+  "devDependencies": {
+    "eslint": "^2.11",
+    "eslint-config-trails": "^2",
+    "mocha": "^2.5",
+    "supertest": "^1.2"
+  },
+  "scripts": {
+    "test": "eslint . && mocha"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "eslintConfig": {
+    "extends": "trails"
+  },
+  "repository": "https://github.com/Maurice-Hayward/availability.git",
+  "license": "Apache-2.0"
+}

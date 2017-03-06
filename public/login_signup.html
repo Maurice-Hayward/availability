@@ -4,33 +4,19 @@
 <head>
 	<title>availability-Log In</title>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-
-	<script>
-		$(document).ready(function(){
-			$("#topNavContent").load("/public/resources/home_top_nav.html"); 
-    		$("#bottomNavContent").load("/public/resources/home_bottom_nav.html"); 
-			
-			$("#signupform").hide();
-    		$("#signup").click(function(){
-        		$(this).prop("disabled", true);
-        		$("#login").prop("disabled", false);
-        		$("#loginform").hide();
-        		$("#signupform").show();
-    		});
-    		$("#login").click(function(){
-        		$(this).prop("disabled", true);
-        		$("#signup").prop("disabled", false);
-        		$("#signupform").hide();
-        		$("#loginform").show();
-    		});
-	});
+	<link rel="stylesheet" type="text/css" href="/public/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/login_signup.css">
+	<!-- Load the Top Nav Bar  -->
+	<script src="/public/js/dependencies/jquery.min.js"></script>
+	<script src="/public/js/dependencies/bootstrap.min.js"></script>
+	<script>	
+		$("#topNavContent").load("/public/resources/home_top_nav.html"); 
+    	$("#bottomNavContent").load("/public/resources/home_bottom_nav.html"); 
+	
 	</script>
-	<style type="text/css">.center-block {float: none !important}</style>
+	<script src="/public/js/login-signup-page.js"></script>
+	<style type="text/css"></style>
 
 </head>
 

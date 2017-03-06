@@ -63,7 +63,7 @@ module.exports = [
    */
   {
     method: [ 'GET' ],
-    path: '/api/v1/default/info',
+    path: '/api/default/info',
     handler: 'DefaultController.info'
   }
 ]

@@ -19,17 +19,17 @@ module.exports = [
   {
     method: 'GET',
     path: '/',
-    handler: 'ViewController.helloWorld'
+    handler: 'PageController.showHomePage'
   },
 
   //Serving Static Files css, img, html
   {
     method: 'GET',
-    path: '/public/',
+    path: '/assets/',
 
     handler: {
       directory: {
-      path: path.resolve(__dirname, '..', 'public'),
+      path: path.resolve(__dirname, '..', 'assets'),
       index:true,
       listing: true,
       redirectToSlash:true
@@ -39,22 +39,6 @@ module.exports = [
     }
   },
 
-  //Serving static files js file (controller)
-  {
-    method: 'GET',
-    path: '/api/controllers/',
-
-    handler: {
-      directory: {
-      path: path.resolve(__dirname, '..', 'api/controllers/'),
-      index:true,
-      listing: true,
-      redirectToSlash:true
-      }
-     
-
-    }
-  },
 
 
 

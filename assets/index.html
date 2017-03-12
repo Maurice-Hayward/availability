@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>availability</title>
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css">
+  <!-- Load the Top Nav Bar  -->
+  <script src="/assets/js/dependencies/jquery.min.js"></script>
+  <script src="/assets/js/dependencies/bootstrap.min.js"></script>
+
+  <script> 
+  $(function(){
+    $("#topNavContent").load("/assets/templates/partial/home_top_nav.html"); 
+    $("#bottomNavContent").load("/assets/templates/partial/home_bottom_nav.html"); 
+  });
+</script>
+
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <!-- Load the Top Nav Bar  -->
+    <div id="topNavContent"></div>
+
+    <img src="/assets/img/goat.jpg" />
+    <br />
+    <p class="clementine-text">Goat Simulator</p>
+
+    <!-- Load the Bottom Nav Bar  -->
+    <div id="bottomNavContent"></div>
+
+  </div>
+
+</body>
+</html>

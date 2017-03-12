@@ -1,6 +1,6 @@
 $(document).ready(function(){
-			$("#topNavContent").load("/public/resources/home_top_nav.html"); 
-    		$("#bottomNavContent").load("/public/resources/home_bottom_nav.html"); 
+			$("#topNavContent").load("/assets/templates/partial/home_top_nav.html"); 
+    		$("#bottomNavContent").load("/assets/templates/partial/home_bottom_nav.html"); 
 			$("#signupform").hide();
     		$("#signup").click(function(){
         		$(this).prop("disabled", true);

@@ -1,0 +1,56 @@
+<html>
+
+<head>
+	<title>availability-Form</title>
+
+	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/fonts/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/login_signup.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/datepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/wickedpicker.min.css">
+
+	<script src="/assets/js/dependencies/jquery.min.js"></script>
+	<script src="/assets/js/dependencies/bootstrap.min.js"></script>
+	<script src="/assets/js/dependencies/datepicker.min.js"></script>
+	<script src="/assets/js/dependencies/wickedpicker.min.js"></script>
+
+	<script src="/assets/js/controllers/paticipantsFormPageController.js"></script>
+
+</head>
+
+<body>
+
+	<div class="container-fluid" >
+		<div id="topNavContent"></div>
+
+		<h2>Cart Form</h2>
+
+		<div class="row">
+			<div class="col-md-4 center-block">
+				<form>
+
+					<div class="datepick form-group">
+
+						<div class="well">
+							<p>Pick a Date</p>
+							<label >Date:</label>
+							<input data-toggle="datepicker" class="form-control">
+							<div class="timepick">
+								<p>Avaliable Time Interval(s)</p>
+								<label >From:</label>
+								<input type="text" name="timepicker" class="timepicker"/>
+								<label >To:</label>
+								<input type="text" name="timepicker" class="timepicker"/>
+							</div>
+						</div>
+					</div>
+
+				</form>
+			</div>
+		</div>
+		<div id="bottomNavContent"></div>
+
+	</div>
+
+</body>
+</html>

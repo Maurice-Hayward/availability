@@ -26,30 +26,55 @@
 		<h2>Cart Form</h2>
 
 		<div class="row">
-			<div class="col-md-4 center-block">
-				<form>
+			<div class="center-block">
+				<form id="DateForm" method="post" class="form-horizontal">
 
-					<div class="datepick form-group">
+					<div class="form-group well">
 
-						<div class="well">
-							<p>Pick a Date</p>
-							<label >Date:</label>
-							<input data-toggle="datepicker" class="form-control">
-							<div class="timepick">
-								<p>Avaliable Time Interval(s)</p>
-								<label >From:</label>
-								<input type="text" name="timepicker" class="timepicker"/>
-								<label >To:</label>
-								<input type="text" name="timepicker" class="timepicker"/>
+						<label class="col-xs-1 control-label">Date</label>
+						<div class="col-xs-2">
+							<input type="text" data-toggle="datepicker" class="form-control" name="day[0].date" placeholder="Enter Date"></div>
+						<div >
+							<label class="col-xs-1 control-label">From:</label>
+							<div class="col-xs-2">
+								<input type="text" name="day[0].time.from" class="form-control timepicker" placeholder="Enter Beginning of Free Time Period (24 Hour Clock)"/>
+							</div>
+							<label class="col-xs-1 control-label">To:</label>
+							<div class="col-xs-2">
+								<input type="text" name="day[0].time.to" class="form-control timepicker" placeholder="Enter End of Free Time Period (24 Hour Clock)"/>
+							</div>
+							<div class="col-xs-2">
+								<button type="button"  class="btn btn-success addButton"> <i class="fa fa-plus">Add Another Date and/or Time</i>
+								</button>
 							</div>
 						</div>
 					</div>
 
+					<div class="form-group well hide" id="dateTemplate">
+						<label class="col-xs-1 control-label">Date</label>
+						<div class="col-xs-2 ">
+							<input type="text" data-toggle="datepicker" class="form-control" name="date" placeholder="Enter Date">
+						</div>
+						<label class="col-xs-1 control-label">From:</label>
+						<div class="col-xs-2">
+							<input type="text" name="timeFrom" class="form-control" placeholder="Enter Beginning of Free Time Period (24 Hour Clock)"/>
+						</div>
+						<label class="col-xs-1 control-label">To:</label>
+						<div class="col-xs-2">
+							<input type="text" name="timeTo" class="form-control" placeholder="Enter End of Free Time Period (24 Hour Clock)"/>
+						</div>
+					
+					</div>
+					<button type="submit" class="btn btn-primary">Submit</button>
 				</form>
-			</div>
-		</div>
-		<div id="bottomNavContent"></div>
+				</div>
 
+				
+
+			</div>
+		
+
+		<div id="bottomNavContent"></div>
 	</div>
 
 </body>

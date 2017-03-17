@@ -10,7 +10,7 @@ $(document).ready(function() {
 
     var numDateFields = 1;
     
-     $(".addButton").click(function(e){ //on add input button click
+     $(".addButton").on("click", function(e){ //on add input button click
         e.preventDefault();
 
         var $newFormLine = $template
@@ -27,14 +27,14 @@ $(document).ready(function() {
         
     });
 
-    $(".removeButton").click(function(e){
+    $(".removeButton").on("click", function(e){
          e.preventDefault();
          $(this).parent().parent().remove();
          numDateFields--;
     })
 
     
-    $("form").submit(function(event) {
+    $("form").on("submit", function(event) {
         console.log($(this).serializeArray());
         event.preventDefault();
     });

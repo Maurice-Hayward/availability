@@ -20,8 +20,8 @@ $(document).ready(function() {
                                 .insertBefore($template)
 
 
-        $('[data-toggle="datepicker"]').datepicker();
-        $('.timepicker').wickedpicker({twentyFour: true,now:'00:00'});
+        //$('[data-toggle="datepicker"]').datepicker();
+        //$('.timepicker').wickedpicker({twentyFour: true,now:'00:00'});
        
         numDateFields++; 
         

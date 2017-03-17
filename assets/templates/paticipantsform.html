@@ -23,47 +23,62 @@
 	<div class="container-fluid" >
 		<div id="topNavContent"></div>
 
-		<h2>Cart Form</h2>
+		<h2>Availability Form</h2>
 
 		<div class="row">
 			<div class="center-block">
 				<form id="DateForm" method="post" class="form-horizontal">
 
-				<div class="input_fields_wrap">
-					<div class="form-group well">
+						<div class="form-group well">
 
-						<label class="col-xs-1 control-label">Date</label>
-						<div class="col-xs-2">
-							<input type="text" data-toggle="datepicker" class="form-control" name="day[0].date" placeholder="Enter Date"></div>
-						<div >
+							<label class="col-xs-1 control-label">Date</label>
+							<div class="col-xs-2">
+								<input type="text" data-toggle="datepicker" class="form-control" name="day[0].date" placeholder="Enter Date"></div>
+							<div >
+								<label class="col-xs-1 control-label">From:</label>
+								<div class="col-xs-2">
+									<input type="text" name="day[0].time.from" class="form-control timepicker" placeholder="24 Hour Clock"/>
+								</div>
+								<label class="col-xs-1 control-label">To:</label>
+								<div class="col-xs-2">
+									<input type="text" name="day[0].time.to" class="form-control timepicker" placeholder="24 Hour Clock"/>
+								</div>
+								<div class="col-xs-2">
+									<button type="button"  class="btn btn-success addButton"> <i class="fa fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group well hide" id="dateTemplate">
+							<label class="col-xs-1 control-label">Date</label>
+							<div class="col-xs-2">
+								<input type="text" data-toggle="datepicker" class="form-control" name="date" placeholder="Enter Date"></div>
 							<label class="col-xs-1 control-label">From:</label>
 							<div class="col-xs-2">
-								<input type="text" name="day[0].time.from" class="form-control timepicker" placeholder="24 Hour Clock"/>
+								<input type="text" name="timeFrom" class="form-control timepicker" placeholder="24 Hour Clock"/>
 							</div>
 							<label class="col-xs-1 control-label">To:</label>
 							<div class="col-xs-2">
-								<input type="text" name="day[0].time.to" class="form-control timepicker" placeholder="24 Hour Clock"/>
+								<input type="text" name="timeTo" class="form-control timepicker" placeholder="24 Hour Clock"/>
 							</div>
 							<div class="col-xs-2">
-								<button type="button"  class="btn btn-success addButton"> <i class="fa fa-plus">Add Another Date and/or Time</i>
-								</button>
+									<button type="button"  class="btn btn-danger removeButton"> <i class="fa fa-trash"></i></button>
 							</div>
 						</div>
-					</div>
 
-				</div>
-					<label class="control-label">Comments:</label><br>
-				<textarea name="comment" form="DateForm">Any Comments or Special Arrangements?</textarea><br><br>
-			
+					
+					<label class="control-label">Comments:</label>
+					<br>
+					<textarea name="comment" form="DateForm">Any Comments or Special Arrangements?</textarea>
+					<br>
+					<br>
+
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</form>
 
-				</div>
-
-				
-
 			</div>
-		
+
+		</div>
 
 		<div id="bottomNavContent"></div>
 	</div>

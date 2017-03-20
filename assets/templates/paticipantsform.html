@@ -4,7 +4,7 @@
 	<title>availability-Form</title>
 
 	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="/assets/fonts/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/login_signup.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/datepicker.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/wickedpicker.min.css">
@@ -33,15 +33,15 @@
 
 							<label class="col-xs-1 control-label">Date</label>
 							<div class="col-xs-2">
-								<input type="text" data-toggle="datepicker" class="form-control" name="day[0].date" placeholder="Enter Date"></div>
+								<input type="text" data-toggle="datepicker" class="form-control" name="date" placeholder="Enter Date" required></div>
 							<div >
 								<label class="col-xs-1 control-label">From:</label>
 								<div class="col-xs-2">
-									<input type="text" name="day[0].time.from" class="form-control timepicker" placeholder="24 Hour Clock"/>
+									<input type="text" name="timeFrom" class="form-control timepicker" placeholder="24 Hour Clock" >
 								</div>
 								<label class="col-xs-1 control-label">To:</label>
 								<div class="col-xs-2">
-									<input type="text" name="day[0].time.to" class="form-control timepicker" placeholder="24 Hour Clock"/>
+									<input type="text" name="timeTo" class="form-control timepicker" placeholder="24 Hour Clock" >
 								</div>
 								<div class="col-xs-2">
 									<button type="button"  class="btn btn-success addButton"> <i class="fa fa-plus"></i></button>
@@ -52,14 +52,14 @@
 						<div class="form-group well hide" id="dateTemplate">
 							<label class="col-xs-1 control-label">Date</label>
 							<div class="col-xs-2">
-								<input type="text" data-toggle="datepicker" class="form-control" name="date" placeholder="Enter Date"></div>
+								<input type="text" data-toggle="datepicker" class="form-control" name="date" placeholder="Enter Date" ></div>
 							<label class="col-xs-1 control-label">From:</label>
 							<div class="col-xs-2">
-								<input type="text" name="timeFrom" class="form-control timepicker" placeholder="24 Hour Clock"/>
+								<input type="text" name="timeFrom" class="form-control timepicker" placeholder="24 Hour Clock" >
 							</div>
 							<label class="col-xs-1 control-label">To:</label>
 							<div class="col-xs-2">
-								<input type="text" name="timeTo" class="form-control timepicker" placeholder="24 Hour Clock"/>
+								<input type="text" name="timeTo" class="form-control timepicker" placeholder="24 Hour Clock" >
 							</div>
 							<div class="col-xs-2">
 									<button type="button"  class="btn btn-danger removeButton"> <i class="fa fa-trash"></i></button>

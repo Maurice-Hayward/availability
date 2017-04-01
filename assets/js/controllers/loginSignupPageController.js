@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    
+
     toastr.options.extendedTimeOut = 0; //makes toastr sticky
     toastr.options.timeOut = 0; //makes toastr sticky
 
@@ -40,13 +40,13 @@ $(document).ready(function() {
             url: '/signup',
             data: formData,
             success: function(res) {
-               toastr.clear()
-               toastr.success('You successfully signed up!');
+                toastr.clear()
+                toastr.success('You successfully signed up!');
 
             },
             error: function(res) {
-            toastr.clear()
-               toastr.error(res.responseText, res.status);
+                toastr.clear()
+                toastr.error(res.responseText, res.status);
             }
 
 

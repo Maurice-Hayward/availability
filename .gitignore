@@ -1,2 +1,4 @@
 node_modules
 coverage
+.tmp
+.install_nvm.sh.swp

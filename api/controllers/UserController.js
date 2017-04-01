@@ -105,15 +105,15 @@ module.exports = class UserController extends Controller {
 							firstname: req.body.firstname,
 							lastname: req.body.lastname,
 							email: req.body.email,
-							password: result,
+							encryptedPassword: result,
 						};
 
 
-						console.log("5");
+						console.log(this);
 						User.create(model)
 							.exec(function(err, model) {
 								if (err) {
-									return res.status(400).send("err:" + err.message)
+									return res.status(400).send("Bad Request: This email is already associated with an account!!")
 								} else {
 									//this.app.orm.User.publishCreate(model.toJSON())
 									return res.status(200).json(model)

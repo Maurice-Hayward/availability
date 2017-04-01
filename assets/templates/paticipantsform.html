@@ -3,18 +3,30 @@
 <head>
 	<title>availability-Form</title>
 
+	<!-- CSS in all HTML assests -->
 	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/login_signup.css">
+
+	<!-- CSS for this specific HTML Page -->
 	<link rel="stylesheet" type="text/css" href="/assets/css/datepicker.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/wickedpicker.min.css">
 
+	<!-- JS in all HTML assests -->
 	<script src="/assets/js/dependencies/jquery.js"></script>
 	<script src="/assets/js/dependencies/bootstrap.min.js"></script>
+
+	<!-- JS for this specific HTML Page -->
 	<script src="/assets/js/dependencies/datepicker.min.js"></script>
 	<script src="/assets/js/dependencies/wickedpicker.js"></script>
-
 	<script src="/assets/js/controllers/paticipantsFormPageController.js"></script>
+	
+	<!-- Load top and bottom Naviagation bar -->
+	<script> 
+  	$(function(){
+    	$("#topNavContent").load("/assets/templates/partial/home_top_nav.html"); 
+    	//$("#bottomNavContent").load("/assets/templates/partial/home_bottom_nav.html"); 
+  	});
+	</script>
 
 </head>
 

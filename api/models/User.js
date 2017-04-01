@@ -33,7 +33,7 @@ module.exports = class User extends Model {
         unique : 'true'
   		},
 
-  		password : {
+  		encryptedPassword : {
   			type: 'string'
   		}
   	}

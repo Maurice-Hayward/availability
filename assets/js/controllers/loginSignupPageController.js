@@ -25,11 +25,11 @@ $(document).ready(function() {
         e.preventDefault();
 
         var formData = {
-            
+
             firstname: $('#signupform input[name=firstname]').val(),
             lastname: $(' #signupform input[name=lastname]').val(),
             email: $(' #signupform input[name=email]').val(),
-            password:  $(' #signupform input[name=pwd]').val(),
+            password: $(' #signupform input[name=pwd]').val(),
 
         };
 
@@ -37,11 +37,16 @@ $(document).ready(function() {
 
         $.ajax({
             type: "POST",
-            url: '/api/v1/user',
+            url: '/signup',
             data: formData,
-            success: function(res){
-                print('cool');
+            success: function(res) {
+                console.log(res);
+            },
+            error: function(res) {
+                console.log(res);
             }
+
+
         });
 
 

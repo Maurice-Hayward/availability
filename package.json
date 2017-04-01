@@ -15,13 +15,20 @@
     "trailsjs"
   ],
   "dependencies": {
+    "body-parser": "^1.17.1",
     "express": "^4.14.1",
+    "lodash": "^4.17.4",
+    "machinepack-emailaddresses": "^0.4.0",
+    "machinepack-passwords": "^2.3.0",
+    "machinepack-strings": "^5.1.0",
     "trailpack-express": "^2.0.3",
     "trailpack-footprints": "^2.0.0",
     "trailpack-repl": "v2-latest",
     "trailpack-router": "v2-latest",
     "trailpack-waterline": "^2.0.0-rc2",
     "trails": "v2-latest",
+    "util": "^0.10.3",
+    "waterline-sqlite3": "^1.0.3",
     "winston": "^2.3"
   },
   "devDependencies": {

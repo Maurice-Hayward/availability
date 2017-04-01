@@ -1,5 +1,4 @@
 'use strict'
-
 /**
  * Server Configuration
  * (app.config.web)
@@ -8,48 +7,41 @@
  *
  * @see {@link http://trailsjs.io/doc/config/web}
  */
+
+const bodyParser = require('body-parser');
+
 module.exports = {
   express: require('express'),
 
-  /**
-   * CORS options
-   * Can be true/false or an object of CORS options
-   * @see {@link https://github.com/expressjs/cors#configuring-cors}
-   */
-  cors: false,
-
-  /**
-   * Init method, can be used to customize express instance
-   */
-  //init: (trailsApp, expressApp) => {},
+  cors: true,
 
   /**
    * Middlewares to load (in order)
    */
-  middlewares: {
+ middlewares: {
 
-    /*
     //middlewares loading order
     order: [
-     'addMethods',
-     'cookieParser',
-     'session',
-     'bodyParser',
-     'compression',
-     'methodOverride',
-     'www',
-     'router',
-     '404',
-     '500'
-    ]*/
+      'addMethods',
+      'cookieParser',
+      'session',
+      'passportInit',
+      'passportSession',
+      'bodyParser',
+      'methodOverride',
+      'www',
+      'router',
+      '404',
+      '500'
+    ],
 
-    /**
-     * Middlewares to load for body parsing
+    
+     //Middlewares to load for body parsing
     bodyParser: [
       bodyParser.json(),
       bodyParser.urlencoded({extended: false})
     ]
-     */
+    
 
   },
 
@@ -66,22 +58,12 @@ module.exports = {
   cache: 31557600000,
 
   /**
-   * The host to bind the web server to
-   */
-  //host: process.env.HOST || 'localhost',
-
-  /**
    * The port to bind the web server to
    */
-  port: process.env.PORT || 3000,
+  port: process.env.PORT || 3000
 
   /**
-   * The host to bind the web server to
-   */
-  host: process.env.HOST || '0.0.0.0'
-
-  /**
-   * Alternate method to add multiple template engine, for single view template use config.views.engine
+   * Alternate method to add multiple template engine, for single view template use config.view.engine
    */
   /*
   views: {

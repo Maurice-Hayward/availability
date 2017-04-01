@@ -8,8 +8,13 @@ $(document).ready(function() {
         now: '00:00',
         minutesInterval: 5
     };
-    
+
+
+  
+
     var $template = $("#dateTemplate"); // form Date Field template
+
+
     var numDateFields = 1;
 
     $(".addButton").on("click", function(e) { //on add input button click

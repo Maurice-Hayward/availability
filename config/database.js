@@ -20,6 +20,8 @@ module.exports = {
    */
   stores: {
 
+
+
     /**
      * Define a store called "local" which uses SQLite3 to persist data.
      *
@@ -27,16 +29,27 @@ module.exports = {
      * run "npm install --save waterline-sqlite3"
      */
 
-    /*
-     dev: {
+    mongodb: {
+      adapter: require('sails-mongo'),
+      migrate: 'alter',
+      host: 'localhost',
+      port: 27017,
+      database: 'trails'
+    },
+    dev: {
       adapter: require('waterline-sqlite3'),
-      migrate: 'alter'
+      migrate: 'drop'
     }
-     */
+
+
   },
 
   models: {
-    defaultStore: 'dev',
-    migrate: 'alter'
+    defaultStore: 'mongodb', // change to dev for sqlite3
+    // defaultStore: 'dev', 
+    migrate: 'drop'
   }
+
+
+
 }

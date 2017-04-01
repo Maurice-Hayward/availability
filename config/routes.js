@@ -13,16 +13,23 @@ const path = require('path')
 
 module.exports = [
 
-  /**
-   * Render the HelloWorld view
-   */
-  {
-    method: 'GET',
-    path: '/',
-    handler: 'PageController.showHomePage'
-  },
+    /*************************************************************
+  * JSON API ENDPOINTS                                         *
+  *************************************************************/
 
-  //Serving Static Files css, img, html
+  {method: 'POST', path: '/signup', handler: 'UserController.signup'},
+  
+
+  /*************************************************************
+  * Server Rendered HTML Page Endpoints                        *
+  *************************************************************/
+  
+
+  {method: 'GET', path: '/', handler: 'PageController.showHomePage'},
+
+    /*************************************************************
+  *Static File  Endpoints                        *
+  *************************************************************/
   {
     method: 'GET',
     path: '/assets/',
@@ -37,17 +44,5 @@ module.exports = [
      
 
     }
-  },
-
-
-
-
-  /**
-   * Constrain the DefaultController.info handler to accept only GET requests.
-   */
-  {
-    method: [ 'GET' ],
-    path: '/api/default/info',
-    handler: 'DefaultController.info'
   }
 ]

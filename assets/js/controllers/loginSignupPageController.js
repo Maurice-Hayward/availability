@@ -39,9 +39,13 @@ $(document).ready(function() {
             type: "POST",
             url: '/signup',
             data: formData,
-            success: function(res) {
+            success: function(resData) {
                 toastr.clear()
                 toastr.success('You successfully signed up!');
+
+                window.location.href = '/profile/' + resData.id 
+                                    + '/' + resData.firstname + '_' + resData.lastname;
+                
 
             },
             error: function(res) {

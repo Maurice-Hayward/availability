@@ -24,8 +24,11 @@ module.exports = [
   * Server Rendered HTML Page Endpoints                        *
   *************************************************************/
   
-
   {method: 'GET', path: '/', handler: 'PageController.showHomePage'},
+  {method: 'GET', path: '/signuploginpage', handler: 'PageController.showSignupLoginPage'},
+  {method: 'GET', path: '/profile/:userid/:name', handler: 'PageController.showProfilePage'},
+
+ 
 
     /*************************************************************
   *Static File  Endpoints                        *

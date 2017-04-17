@@ -21,6 +21,7 @@ module.exports = {
     require('trailpack-express'),
     require('trailpack-waterline'),
     require('trailpack-footprints')
+
   ],
 
   /**

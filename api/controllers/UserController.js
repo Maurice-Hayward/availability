@@ -72,7 +72,7 @@ module.exports = class UserController extends Controller {
 		if (req.body.password.length < 6) {
 			return res.status(400).send('Bad Request: Password must be at least 6 characters!');
 		}
-		console.log("2")
+		
 			// Determine whether or not the provided string is an email address.
 		Emailaddresses.validate({
 			string: req.body.email,
@@ -109,13 +109,12 @@ module.exports = class UserController extends Controller {
 						};
 
 
-						console.log(this);
+			
 						User.create(model)
 							.exec(function(err, model) {
 								if (err) {
 									return res.status(400).send("Bad Request: This email is already associated with an account!!")
 								} else {
-									//this.app.orm.User.publishCreate(model.toJSON())
 									return res.status(200).json(model)
 								}
 							})

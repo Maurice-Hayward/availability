@@ -18,32 +18,9 @@ const util = require('util');
 
 
 
-
 module.exports = class UserController extends Controller {
 
-	
 
-	create(req, res) {
-		const User = this.app.orm['User'];
-		console.log('user create ', req.body)
-		var model = {
-			email: req.body.email,
-			firstname: req.body.firstname,
-			lastname: req.body.lastname,
-			password: req.body.password
-		}
-
-		console.log('model ', model)
-		User.create(model)
-			.exec(function(err, model) {
-				if (err) {
-					return res.status(400).send("err:" + err.message)
-				} else {
-					//this.app.orm.User.publishCreate(model.toJSON())
-					return res.status(200).json(model)
-				}
-			})
-	}
 
 	signup(req, res) {
 		const User = this.app.orm['User'];
@@ -72,8 +49,8 @@ module.exports = class UserController extends Controller {
 		if (req.body.password.length < 6) {
 			return res.status(400).send('Bad Request: Password must be at least 6 characters!');
 		}
-		
-			// Determine whether or not the provided string is an email address.
+
+		// Determine whether or not the provided string is an email address.
 		Emailaddresses.validate({
 			string: req.body.email,
 		}).exec({
@@ -109,7 +86,7 @@ module.exports = class UserController extends Controller {
 						};
 
 
-			
+
 						User.create(model)
 							.exec(function(err, model) {
 								if (err) {
@@ -122,6 +99,22 @@ module.exports = class UserController extends Controller {
 				});
 			}
 		});
+	}
+
+	profile(req,res){
+		const User = this.app.orm['User'];
+		
+		User.findOne(req.params.userid).exec(function (err, foundUser){
+
+			if(err) return res.status(500).send('Server Error: ' + err.message);
+
+			if(!foundUser) res.status(404).send("Bad Request: User Not Found!!");
+
+			return res.json(foundUser);
+
+
+		})
+
 	}
 
 

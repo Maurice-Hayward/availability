@@ -18,6 +18,7 @@ module.exports = [
   *************************************************************/
 
   {method: 'POST', path: '/signup', handler: 'UserController.signup'},
+  {method: 'GET', path: '/profile/:userid', handler: 'UserController.profile'},
   
 
   /*************************************************************
@@ -26,7 +27,7 @@ module.exports = [
   
   {method: 'GET', path: '/', handler: 'PageController.showHomePage'},
   {method: 'GET', path: '/signuploginpage', handler: 'PageController.showSignupLoginPage'},
-  {method: 'GET', path: '/profile/:userid/:name', handler: 'PageController.showProfilePage'},
+  {method: 'GET', path: '/profilepage/:userid/:name', handler: 'PageController.showProfilePage'},
 
  
 

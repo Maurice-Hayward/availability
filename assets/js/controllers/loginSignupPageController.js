@@ -43,7 +43,7 @@ $(document).ready(function() {
                 toastr.clear()
                 toastr.success('You successfully signed up!');
 
-                window.location.href = '/profile/' + resData.id 
+                window.location.href = '/profilepage/' + resData.id 
                                     + '/' + resData.firstname + '_' + resData.lastname;
                 
 

@@ -20,7 +20,8 @@ module.exports = {
     require('trailpack-router'),
     require('trailpack-express'),
     require('trailpack-waterline'),
-    require('trailpack-footprints')
+    require('trailpack-footprints'),
+    require('trailpack-bootstrap')
 
   ],
 

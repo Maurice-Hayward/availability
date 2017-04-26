@@ -22,6 +22,7 @@
     "machinepack-passwords": "^2.3.0",
     "machinepack-strings": "^5.1.0",
     "sails-mongo": "^0.12.2",
+    "trailpack-bootstrap": "^2.0.0",
     "trailpack-express": "^2.0.3",
     "trailpack-footprints": "^2.0.0",
     "trailpack-repl": "v2-latest",

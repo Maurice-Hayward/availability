@@ -11,7 +11,8 @@ module.exports = function(app) {
 		firstname : 'maurice',
 		lastname : 'hayward',
 		password : 'abc123',
-		email : 'mauricehayward1@gmail.com'
+		email : 'mauricehayward1@gmail.com',
+		_id : "1"
 	}
 
 	User.findOne({
